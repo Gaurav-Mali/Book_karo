@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Booking System</title>
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0;
+      font-weight: 400;
+      }
+      h3 {
+      margin: 12px 0;
+      color: #8ebf42;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      }
+      fieldset {
+      border: none;
+      border-top: 1px solid #8ebf42;
+      }
+      .account-details, .personal-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .account-details >div, .personal-details >div >div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      }
+      .account-details >div, .personal-details >div, input, label {
+      width: 100%;
+      }
+      label {
+      padding: 0 5px;
+      text-align: right;
+      vertical-align: middle;
+      }
+      input {
+      padding: 5px;
+      vertical-align: middle;
+      }
+      .checkbox {
+      margin-bottom: 10px;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(100% + 26px);
+      padding: 5px 0;
+      }
+      select {
+      background: transparent;
+      }
+      .gender input {
+      width: auto;
+      } 
+      .gender label {
+      padding: 0 5px 0 0;
+      } 
+      .bdate-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .birthdate select.day {
+      width: 35px;
+      }
+      .birthdate select.mounth {
+      width: calc(100% - 94px);
+      }
+      .birthdate input {
+      width: 38px;
+      vertical-align: unset;
+      }
+      .checkbox input, .children input {
+      width: auto;
+      margin: -2px 10px 0 0;
+      }
+      .checkbox a {
+      color: #8ebf42;
+      }
+      .checkbox a:hover {
+      color: #82b534;
+      }
+      button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #8ebf42; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #82b534;
+      }
+      @media (min-width: 568px) {
+      .account-details >div, .personal-details >div {
+      width: 50%;
+      }
+      label {
+      width: 40%;
+      }
+      input {
+      width: 60%;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(60% + 16px);
+      }
+      }
+    </style>
+ 
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  </head>
+
+<body>
+  <section>
+			<div id="page-wrapper" class="sign-in-wrapper">
+				<div class="graphs">
+					<div class="sign-up">
+					<form action="ManAdd" onsubmit="return validateForm()" class="mt-4" method="post">
+						<h3>Add Manager here</h3>
+						<p class="creating"></p>
+						<h5>Personal Information</h5>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>Name :</h4>
+							</div>
+							<div class="sign-up2">
+		
+									<input type="text" name="nm" placeholder="Name" required=""/>
+								
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>Email:</h4>
+							</div>
+							<div class="sign-up2">
+								
+									<input type="text" name="em" placeholder="Email " required=" "/>
+								
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>Phone no :</h4>
+							</div>
+							<div class="sign-up2">
+								
+									<input type="text" name="ph"  placeholder="Phone no" required=" "/>
+								
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>Mobile no :</h4>
+							</div>
+							<div class="sign-up2">
+								
+									<input type="text" name="mb"  placeholder="Mobile no" required=" "/>
+								
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>Street :</h4>
+							</div>
+							<div class="sign-up2">
+								
+									<input type="text" name="st" placeholder="Street " required=" "/>
+								
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>city :</h4>
+							</div>
+							<div class="sign-up2">
+								
+									<input type="text" name="ct" placeholder="City" required=" "/>
+								
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>User name:</h4>
+							</div>
+							<div class="sign-up2">
+								
+									<input type="text" name="un" placeholder="User name " required=" "/>
+								
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="sign-u">
+							<div class="sign-up1">
+								<h4>Password:</h4>
+							</div>
+							<div class="sign-up2">
+								
+									<input type="password" name="pass" placeholder="Password" required=" "/>
+								
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						
+						<div class="sub_home">
+							<div class="sub_home_left">
+								
+									<input type="submit" value="Submit">
+			
+							</div>
+							<div class="sub_home_right">
+								<p>Go Back to <a href="AdminDash.html">Home</a></p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		<div id="piechart"></div>
+	</section>
+  
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Manager', 'Per city'],
+  ['Jalgaon', 3],
+  ['Mumbai', 2],
+  ['Pune', 2],
+  ['Dhule', 4],
+  ['Nashik', 2],
+  ['Shirpur', 1]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Managers Per City', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+ <script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+
+  </body>
+
+</html>
